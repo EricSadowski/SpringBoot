@@ -1,0 +1,27 @@
+body {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+#logoNav {
+max-height: 50px;
+}
+
+#cartNav{
+height: 50px;
+}
+
+#invLink{
+text-align: center;
+background-color: black;
+color: white;
+font-size: 40px;
+}
+
+
+.recCover{
+margin-bottom: 10px;
+}
+
