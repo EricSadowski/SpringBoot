@@ -5,6 +5,10 @@ body {
 
 
 
+#gallery{
+margin-top: 20px;
+}
+
 #logoNav {
 max-height: 50px;
 }
@@ -20,8 +24,13 @@ color: white;
 font-size: 40px;
 }
 
+.gallery-item{
+text-align: center;
+}
+
 
 .recCover{
+height: 300px;
 margin-bottom: 10px;
 }
 

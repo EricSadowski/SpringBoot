@@ -34,10 +34,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-main">
     <div class="container">
         <a class="navbar-brand" href="#"><img th:src="@{/images/record.png}" alt="logo" id="logoNav"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainHeader"
-                aria-controls="navbarMainHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
         <div class="" id="navbarMainHeader">
             <ul class="navbar-nav mx-auto">
 <!--                <li class="nav-item">-->
@@ -46,31 +43,19 @@
 <!--                <li class="nav-item">-->
 <!--                    <a class="nav-link" href="#" onclick="goToShop('men')">Men's</a>-->
 <!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#" onclick="goToShop('women')">Women's</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" href="#" onclick="goToShop('kids')">Kids</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item" onclick="goToShop('Running')">-->
-<!--                    <a class="nav-link" href="#">Running</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item" onclick="goToShop('Basketball')">-->
-<!--                    <a class="nav-link" href="#">Basketball</a>-->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a class="nav-link" onclick="goToShop('price')" href="#">Sale</a>-->
-<!--                </li>-->
                 <li class="nav-item" id="loginZone">
 <!--                    <button type="button" id="navLogin" class="btn btn-outline-warning btn-round" data-toggle="modal" data-target="#loginModal">-->
 <!--                        Login-->
 <!--                    </button>-->
 
                     <div id="loggedIn">
-                        <p>Hello! <span sec:authentication="principal.username"></span> </p>
+                        <p>Hello! User <span sec:authentication="principal.username"></span> </p>
                     </div>
-                    <form action="#" th:action="@{/logout}" method="POST">
-                        <input type="submit" value="Logout" />
+                    <form>
+<!--                        <form action="#" th:action="@{/logout}" method="POST">-->
+
+                        <input class="btn btn-secondary" type="submit" value="Logout" />
+                        <a class="btn btn-primary" th:href="@{/records/list}">Inventory Management</a>
                     </form>
                 </li>
             </ul>
@@ -106,7 +91,7 @@
         </div>
     </section><!-- End Gallery Section -->
 
-<div sec:authorize="hasRole('ADMIN')" id="invLink">
+<div  id="invLink">
     <p>
         <a th:href="@{/records/list}">Inventory Management</a>
     </p>
